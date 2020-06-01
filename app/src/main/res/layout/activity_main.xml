@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/city_et"
+        android:hint="Enter City Name"
+        android:textColorHint="#687466"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@drawable/round_btn"
+        android:textColor="#0f4c75"></EditText>
+
+    <TextView
+        android:id="@+id/wind_view_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_eidttxt"
+        android:visibility="gone"
+        android:textColor="#F6F5F5"
+        android:gravity="center"
+        android:layout_marginTop="350dp"></TextView>
+    <Button
+        android:id="@+id/wind_btn"
+        android:text="show wind direction"
+        android:layout_marginTop="132dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:layout_gravity="center"
+        android:textColor="#46B5D1"
+        ></Button>
+</LinearLayout>
