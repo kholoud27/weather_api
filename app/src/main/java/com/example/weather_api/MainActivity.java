@@ -34,16 +34,16 @@ public class MainActivity extends AppCompatActivity {
         city_et = findViewById(R.id.city_et);
         Wind_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String strtxt =city_et.getText().toString();
-                connectToAPI(strtxt);
+                //String strtxt =city_et.getText().toString();
+                connectToAPI();
                // Wind_tv.setVisibility(View.VISIBLE);
             }
         });
 
     }
-    private  void  connectToAPI(String cityname)
+    private  void  connectToAPI()
     {
-        String API_Link = "https://samples.openweathermap.org/data/2.5/weather?q="+cityname+"&appid=439d4b804bc8187953eb36d2a8c26a02";
+        String API_Link = "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=439d4b804bc8187953eb36d2a8c26a02";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, API_Link,
