@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(response);
                            // Double speed = jsonObject.getDouble("speed");
                            // Double degree = jsonObject.getDouble("deg");
-
-                            Toast.makeText(MainActivity.this,response,Toast.LENGTH_LONG).show();
+                            String name = jsonObject.getString("name");
+                            Toast.makeText(MainActivity.this,name,Toast.LENGTH_LONG).show();
                            // Wind_tv.setText("\t"+speed+"\t"+degree);
                         } catch (JSONException e) {
                             e.printStackTrace();
