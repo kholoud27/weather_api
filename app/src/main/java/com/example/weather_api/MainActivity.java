@@ -22,7 +22,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     Button Wind_btn ;
-    //TextView Wind_tv;
+    TextView Wind_tv;
     EditText city_et;
 
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String strtxt =city_et.getText().toString();
                 connectToAPI(strtxt);
-               // Wind_tv.setVisibility(View.VISIBLE);
+               Wind_tv.setVisibility(View.VISIBLE);
             }
         });
 
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
                             Double degree = wind.getDouble("deg");
                            // String name;
 
-                            Toast.makeText(MainActivity.this,speed+"\t"+degree,Toast.LENGTH_LONG).show();
-                           // Wind_tv.setText("\t"+speed+"\t"+degree);
+                            //Toast.makeText(MainActivity.this,speed+"\t"+degree,Toast.LENGTH_LONG).show();
+                            Wind_tv.setText("The Speed of Wind"+"\t"+speed+"\n"+"\n"+"The Degree Of Wind "+"\t"+degree);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
