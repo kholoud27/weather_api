@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                            // String name;
 
                             //Toast.makeText(MainActivity.this,speed+"\t"+degree,Toast.LENGTH_LONG).show();
-                            Wind_tv.setText("The Speed of Wind"+"\t"+speed+"\n"+"\n"+"The Degree Of Wind "+"\t"+degree);
+                            Wind_tv.setText("The Speed of Wind"+"\t"+speed+"The Degree Of Wind "+"\t"+degree);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
