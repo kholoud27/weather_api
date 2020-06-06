@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Wind_btn = findViewById(R.id.wind_btn);
-       // Wind_tv =findViewById(R.id.wind_view_tv);
+        Wind_tv =findViewById(R.id.wind_view_tv);
         city_et = findViewById(R.id.city_et);
         Wind_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private  void  connectToAPI(String cityname)
     {
-        String API_Link = "https://samples.openweathermap.org/data/2.5/weather?q="+cityname+",uk&appid=439d4b804bc8187953eb36d2a8c26a02";
+        String API_Link = "https://openweathermap.org/data/2.5/weather?q="+cityname+"&appid=439d4b804bc8187953eb36d2a8c26a02";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, API_Link,
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                             Double degree = wind.getDouble("deg");
                            // String name;
 
-                            //Toast.makeText(MainActivity.this,speed+"\t"+degree,Toast.LENGTH_LONG).show();
+                            //Toast.makeText(MainActivity.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();
                             Wind_tv.setText("The Speed of Wind"+"\t"+speed+"The Degree Of Wind "+"\t"+degree);
                         } catch (JSONException e) {
                             e.printStackTrace();
